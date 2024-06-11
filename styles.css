@@ -46,6 +46,7 @@ body {
 main {
     max-width: 650px;
     text-align: center;
+    padding: 4rem 0rem 2rem 0rem;
 }
 
 h1 {
