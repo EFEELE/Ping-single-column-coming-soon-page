@@ -1,0 +1,229 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    /* ### Primary */
+
+    --Blue: hsl(223, 87%, 63%);
+
+    --Blue-normal: hsl(223, 87%, 63%, 75%);
+
+    /* ### Secondary */
+
+    --Pale-Blue: hsl(223, 100%, 88%);
+
+    --Pale-Blue-normal: hsl(223, 100%, 88%, 70%);
+
+    --Light-Red: hsl(354, 100%, 66%);
+
+    /* ### Neutral */
+
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+
+}
+
+/* - Weights: 300, 600, 700 */
+body {
+    font-size: 20px;
+    font-family: "Libre Franklin", sans-serif;
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main {
+    max-width: 650px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--Gray);
+    font-weight: 300;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+b {
+    color: var(--Very-Dark-Blue);
+}
+
+p {
+    color: var(--Very-Dark-Blue);
+    margin: 0;
+}
+
+.form-group {
+    margin-top: 2.3rem;
+    box-sizing: border-box;
+    display: flex;
+    gap: 1rem;
+}
+
+input {
+    width: 60%;
+    background-color: white;
+    border: 1px solid var(--Pale-Blue-normal);
+    font-size: 20px;
+    font-family: "Libre Franklin", sans-serif;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+input::placeholder {
+    font-size: 1rem;
+    color: var(--Pale-Blue-normal);
+    font-family: "Libre Franklin", sans-serif;
+}
+
+button {
+    width: 33%;
+    background-color: var(--Blue);
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 2rem;
+    box-shadow: 0px 7px 13px var(--Pale-Blue-normal);
+}
+
+button:hover {
+    background-color: var(--Blue-normal);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+img.illustration {
+    width: 100%;
+    margin: 5.5rem 0rem;
+}
+
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1.75rem;
+}
+
+li a {
+    border: 1px solid var(--Pale-Blue-normal);
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+li a:hover {
+    background-color: var(--Blue);
+    cursor: pointer;
+    transition: .3s ease;
+    
+}
+
+li a:hover ion-icon{
+    color: white;
+}
+
+ion-icon {
+    color: var(--Blue);
+    font-size: .9rem;
+}
+
+footer {
+    color: var(--Gray);
+    font-size: .75rem;
+}
+
+#message-alert {
+    position: absolute;
+    margin-top: 58px;
+    margin-left: 2rem;
+    display: none;
+}
+
+#message-alert span {
+    font-style: italic;
+    font-size: .85rem;
+    color: var(--Light-Red);
+    transition: .5s ease;
+}
+
+.error #message-alert {
+    display: block;
+    transition: .3s ease;
+}
+
+.error input {
+    border: 1px solid var(--Light-Red);
+    transition: .5s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 3rem 0rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0rem 2rem;
+        box-sizing: border-box;
+    }
+
+    main {
+        padding: 3rem 0rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    main{
+        padding: 5rem 0rem 2rem 0rem;
+        width: auto;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .form-group{
+        flex-direction: column;
+        gap: 0;
+    }
+    input{
+        width: auto;
+        padding: .75rem 1.5rem;
+    }
+    button{
+        width: 100%;
+        padding: .75rem 1.5rem;
+        margin-top: 1rem;
+    }
+    input, input::placeholder{
+        font-size: .9rem;
+    }
+    #message-alert{
+        position: relative;
+        margin-top: .2rem;
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+}
